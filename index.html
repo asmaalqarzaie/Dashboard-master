@@ -19,7 +19,11 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    
+   <link="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"/>
   </head>
+
 
   <body>
     <nav>
@@ -104,39 +108,22 @@
                   Search
                 </button>
               </div>
-              <form class="d-flex">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
           </div>
         </div>
       </nav>
       <!-- Sidebar Toggle Icon-->
       <!-- Navbar Search-->
       <!-- User Profile-->
-    </nav>
-
-    <!-- Sidebar -->
-    <div>
-      <div>
-        <nav></nav>
-      </div>
+   
 
       <!-- The Main Content -->
 
-      <div class="container">
+      <div class="container my-5">
         <div class="row">
           <div class="col">
             <div class="card bg-pink">
               <div class="card-body">Sales</div>
+              
               <div class="card-footer">view Details</div>
             </div>
           </div>
@@ -167,13 +154,14 @@
                 <i class="fas fa-border-all"></i>
                 Orders
               </div>
-              <div class="card-body"></div>
+              <div class="card-body"><canvas id="myChart" width="400" height="200 p-3"></canvas>
+                </div>
             </div>
           </div>
           <div class="col">
             <div class="card">
               <div class="card-header"><i class="fas fa-eye"></i> Visitor</div>
-              <div class="card-body"></div>
+              <div class="card-body"><canvas id="myvistor" width="400" height="200"></canvas></div>
             </div>
           </div>
         </div>
@@ -182,17 +170,17 @@
           <div class="col">
             <div class="card">
               <div class="card-header">
-                <i class="fas fa-map-marker"></i> Visitors Cities
+                <i class="fas fa-map-marker"></i> VisitorsCities
               </div>
-              <div class="card-body"></div>
+              <div class="card-body"><canvas id="myvistorcities" width="400" height="200"></canvas></div>
             </div>
           </div>
           <div class="col">
             <div class="card">
               <div class="card-header">
-                <i class="fas fa-star"></i> Customers Rat
+                <i class="fas fa-star"></i> CustomersRat
               </div>
-              <div class="card-body"></div>
+              <div class="card-body"><canvas id="customerRat" width="400" height="200"></canvas></div>
             </div>
           </div>
         </div>
@@ -200,8 +188,8 @@
         <div class="row mt-3">
           <div class="col">
             <div class="card">
-              <div class="card-header">order</div>
-              <div class="card-body"></div>
+              <div class="card-header">Customers</div>
+              <div class="card-body"><canvas id="Customers" width="400" height="200"></canvas></div>
             </div>
           </div>
         </div>
@@ -235,5 +223,24 @@
     ></script>
     <script src="js/scripts.js"></script>
     <script src="js/charts.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <table id="table_id" class="display"></table>
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Row 1 Data 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Row 2 Data 2</td>
+        </tr>
+    </tbody>
+</table>
   </body>
 </html>
