@@ -58,3 +58,31 @@ const products = [
 ];
 
 
+
+var cards = document.querySelector("#cards");
+console.log(cards)
+products.map((card)=>
+cards.innerHTML += `<div class="card mb=3 p-3 id="${card.ProductId}"">
+<div class="row g-0">
+<div class="col-md-3 text-center">
+<img src="${card.image}" class="img-fluid rounded-start" alt="...">
+</div>
+<div class="col-md-6">
+<div calss="card-body">
+<h5 class="card-title">${card.name}</h5>
+<p class="card-text">${card.description}</p>
+</p>
+</div>
+</div>
+<div class="col-md-3 text-center">
+<h5 class="price">${card.price}$</h5>
+<h5 class="price">${card.status}$</h5>
+<button type="button" class="btn btn-primry w-75 my-3 ">products</button>
+<button type="button" class="btn btn-danger w-75  ">Delete</button>
+</div>
+</div>
+</div>`
+
+  
+).join('')
+
